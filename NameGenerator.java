@@ -4,7 +4,9 @@
  */
 public class NameGenerator
 {
-    
+    private static final int INICIO = 0;
+    private static final int NOMBRE = 3;
+    private static final int APELLIDO = 2;
 
     /**
      * Constructor for objects of class NameGenerator
@@ -23,8 +25,8 @@ public class NameGenerator
     public void generateStarWarsName(String nombre, String apellido1, String apellido2, String ciudad)
     {
         //nombre de la serie
-        String nombrePelicula = apellido1.substring(0, 3) + nombre.substring(0, 3).toLowerCase();
-        String apellidoPelicula = apellido2.substring(0, 2) + ciudad.substring(0, 2).toLowerCase();
+        String nombrePelicula = apellido1.substring(INICIO, NOMBRE) + nombre.substring(INICIO, NOMBRE).toLowerCase();
+        String apellidoPelicula = apellido2.substring(INICIO, APELLIDO) + ciudad.substring(INICIO, APELLIDO).toLowerCase();
         System.out.println("Nombre real: " + nombre + " " + apellido1 + " " + apellido2 + " " + "\tCiudad de nacimiento: " + ciudad + "\nNombre ficticio: " + nombrePelicula + " " + apellidoPelicula);
     }
 }
